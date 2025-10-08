@@ -1,0 +1,40 @@
+.primary-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  gap: 10px;
+  cursor: pointer;
+  padding: 0 15px;
+  font-size: var(--font-size-small);
+  font-weight: 600;
+  color: var(--tertiary-color);
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: var(--secondary-color);
+  transition: transform 0.3s ease-in-out;
+
+  &.large {
+    height: 55px;
+    padding: 0 25px;
+
+    @media (max-width: 768px) {
+      height: 45px;
+      padding: 0 20px;
+    }
+  }
+
+  &.small {
+    height: 35px;
+    padding: 0 10px;
+  }
+
+  &:not(.large):not(.middle):not(.small) {
+    height: 45px;
+    padding: 0 20px;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
