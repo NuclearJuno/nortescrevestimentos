@@ -1,12 +1,14 @@
 import { Element } from "react-scroll";
 import { Navbar } from "./components/Navbar";
+import { Footer } from "./components/Footer"; // 1. Adicione esta linha
+import WhatsAppButton from "./components/WhatsappButton"; // 2. Adicione esta linha
+
 import Home from "./pages/home";
 import Products from "./pages/products";
-import AboutUs from "./pages/about-us"; // Corrigido
+import AboutUs from "./pages/about-us";
 import Brands from "./pages/brands";
 import OurProcesses from "./pages/our-process";
-
-// import "./App.css"; // Não precisamos mais deste se usamos o style.scss global
+import Contact from "./pages/contact";
 
 function App() {
   return (
@@ -22,14 +24,14 @@ function App() {
         <AboutUs />
       </Element>
       <Brands />
-      <Element name="como-trabalhamoos">
+      <Element name="como-trabalhamos">
         <OurProcesses />
       </Element>
       <Element name="contato">
-        {/* <Contact /> */}
+        <Contact />
       </Element>
-      {/* <WhatsAppButton /> */}
-      {/* <Footer /> */}
+      <WhatsAppButton /> {/* 3. Adicione esta linha */}
+      <Footer /> {/* 4. Adicione esta linha */}
     </main>
   );
 }

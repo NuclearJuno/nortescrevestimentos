@@ -1,0 +1,128 @@
+.contact-container {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+  min-height: 70vh;
+  padding: 5em 0;
+
+  & > .content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1140px;
+    gap: 40px;
+
+    & > .left-content {
+      display: flex;
+      align-items: start;
+      flex-direction: column;
+      width: 45%;
+      gap: 45px;
+
+      & > .text-container {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        gap: 18px;
+
+        & > h2 {
+          max-width: 500px;
+          font-size: var(--font-size-subtitle);
+          font-weight: 700;
+          color: var(--font-color);
+          text-transform: uppercase;
+          position: relative;
+
+          &::after {
+            content: "";
+            display: block;
+            width: 50%;
+            height: 3px;
+            background-color: var(--border-color, var(--font-color));
+            position: absolute;
+            bottom: -5px;
+          }
+        }
+
+        & > h3 {
+          color: var(--quaternary-color);
+          font-weight: 700;
+          font-size: var(--font-size-subtext);
+        }
+      }
+
+      & > .success-message {
+        color: green;
+        font-size: var(--font-size-large);
+        font-weight: 600;
+      }
+
+      & > .form-container {
+        display: flex;
+        width: 100%;
+        gap: 15px;
+        flex-direction: column;
+
+        & > label {
+          & > input,
+          textarea {
+            width: 100%;
+            padding: 10px;
+            outline: none;
+            font-size: var(--font-size-default);
+            background-color: var(--background-color);
+          }
+
+          & > input {
+            height: 50px;
+          }
+
+          & > textarea {
+            resize: none;
+            height: 160px;
+          }
+        }
+
+        & > button {
+          width: 100%;
+          height: 55px;
+          font-weight: 700;
+          transform: none;
+          transition: none;
+        }
+      }
+    }
+
+    & > .right-content {
+      width: 45%;
+      height: 100%;
+
+      & > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    @media (max-width: 1280px) {
+      width: 90vw;
+    }
+
+    @media (max-width: 992px) {
+      width: 90vw;
+      flex-direction: column-reverse;
+      
+      & > .left-content,
+      & > .right-content {
+        width: 100%;
+      }
+
+      & > .right-content > img {
+        height: 400px;
+      }
+    }
+  }
+}
